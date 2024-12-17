@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaSearch, FaHeart, FaShoppingCart, FaBars } from 'react-icons/fa';
-import '../main-navbar/MainNavbar.css';
+import 'src\components\NavBar\top-navbar\TopNavBar.css';
 
 function MainNavbar() {
     const [menuOpen, setMenuOpen] = useState(false);
