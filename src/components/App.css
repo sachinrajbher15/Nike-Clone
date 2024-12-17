@@ -1,0 +1,39 @@
+/* TopNavbar.css */
+
+/* Top Navbar */
+.top-navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container-1 img {
+    width: 30px;
+    height: auto;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.top-navbar-links {
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    gap: 12px;
+    margin-right: 70px;
+}
+
+.top-navbar-links li:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+/* Hide top navbar on smaller screens */
+@media (max-width: 1024px) {
+    .top-navbar {
+        display: none; /* Hide the top navbar on tablet/mobile */
+    }
+}
