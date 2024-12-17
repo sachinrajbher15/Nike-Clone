@@ -12,7 +12,7 @@ import FeaturedSection from './Featured/FeaturedSection.jsx'
 import ShopBySport from './ShopBySport/ShopBySport.jsx'
 import MemberBenifits from './MemberBenifits/MemberBenifits.jsx'
 import DevelopedBy from './DevelopedBy/DevelopedBy.jsx'
-
+import '../components/App.css';
 function App() {
   return (
     <>
