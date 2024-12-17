@@ -1,5 +1,5 @@
 import React from 'react';
-import '../top-navbar/TopNavbar.css';
+import 'src\components\NavBar\top-navbar\TopNavBar.css';
 
 function TopNavbar() {
     return (
