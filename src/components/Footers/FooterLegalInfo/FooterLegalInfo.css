@@ -1,0 +1,36 @@
+.legal-info-footer-container{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.legal-info-footer-container ul{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center the items horizontally */
+}
+
+.legal-info-footer-container li{
+    list-style: none;
+    color: gray;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px; /* Added spacing between list items */
+}
+
+.legal-info-footer-container li:hover{
+    color: black;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .legal-info-footer-container ul {
+        gap: 10px;
+    }
+    .legal-info-footer-container li{
+        font-size: 12px;
+    }
+}

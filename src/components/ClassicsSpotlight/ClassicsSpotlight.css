@@ -1,0 +1,140 @@
+.spotlight-container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.spotlight-header h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.spotlight-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.spotlight-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+
+.spotlight-slide {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.spotlight-slide-image {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.spotlight-slide-content {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.spotlight-slider-navigation-buttons {
+    position: absolute;
+    top: 45%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+    transform: translateY(-50%);
+}
+
+.spotlight-slider-navigation-buttons button {
+    background: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.spotlight-slider-navigation-buttons button:hover {
+    opacity: 1;
+}
+
+.spotlight-counter {
+    padding: 8px 14px;
+    border: none;
+    background-color: gray;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    cursor: default;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .spotlight-slide-image {
+        width: 200px;
+        height: 160px;
+    }
+
+    .spotlight-slide-content {
+        font-size: 0.9rem;
+    }
+
+    .spotlight-slider-navigation-buttons button {
+        padding: 8px 12px;
+        font-size: 1.25rem;
+    }
+
+    .spotlight-counter {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .spotlight-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .spotlight-slide-image {
+        width: 180px;
+        height: 140px;
+    }
+
+    .spotlight-slide-content {
+        font-size: 0.8rem;
+    }
+
+    .spotlight-slider-navigation-buttons {
+        width: 100%;
+        justify-content: space-between;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .spotlight-slider-navigation-buttons button {
+        padding: 8px 12px;
+        font-size: 1.1rem;
+    }
+
+    .spotlight-counter {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}

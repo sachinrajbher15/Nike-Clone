@@ -1,0 +1,187 @@
+/* MainNavbar.css */
+
+/* Main Navbar */
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+}
+
+/* Logo Container */
+.logo-container-2 img {
+    width: 80px;
+    height: auto;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+/* Navbar Links */
+.main-navbar-links {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.main-navbar-links li:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+/* Right Section (Icons & Search) */
+.right-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-right: 50px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.right-section button {
+    cursor: pointer;
+}
+
+.right-section button,
+.right-section input {
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    background: transparent;
+}
+
+.right-section input {
+    font-size: 15px;
+    width: 150px; /* Width of the search bar */
+    padding: 10px;
+    display: inline-block;
+}
+
+.right-section input::placeholder {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.right-section button {
+    font-size: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon:hover {
+    background-color: gray;
+    border-radius: 50%;
+}
+
+/* Hamburger Menu (hidden by default) */
+.hamburger-menu {
+    display: none;
+}
+
+/* Mobile and Tablet View */
+@media (max-width: 1024px) {
+    .logo-container-2 img {
+        display: none;
+    }
+    .main-navbar {
+        flex-direction: row;
+        align-items: center; /* Align items in a row */
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logo-container-2 {
+        margin-bottom: 0;
+        margin-left: 20px;
+    }
+
+    .main-navbar-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: #fff;
+        padding: 10px 0;
+    }
+
+    .main-navbar-links.show {
+        display: flex;
+    }
+
+    /* Right section icons */
+    .right-section {
+        display: flex;
+        justify-content: center; /* Center icons */
+        gap: 15px;
+        margin-right: 0;
+        align-items: center;
+        flex: 1;
+    }
+
+    /* Hide the search input on tablet/mobile */
+    .right-section input {
+        display: none; /* Hide input on tablet */
+    }
+
+    /* Hamburger Menu - Move to the rightmost corner */
+    .hamburger-menu {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        margin-left: auto; /* Move hamburger to the far right */
+    }
+
+    .right-section button.search-icon {
+        font-size: 20px; /* Keep the search icon visible */
+    }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .main-navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Right section icons */
+    .right-section {
+        display: flex;
+        justify-content: center; /* Center icons */
+        gap: 15px;
+        margin-right: 0;
+        flex: 1;
+        align-items: center;
+    }
+
+    /* Hide the search input on mobile */
+    .right-section input {
+        display: none; /* Hide input on mobile */
+    }
+
+    /* Hamburger Menu - Move to the rightmost corner */
+    .hamburger-menu {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        margin-left: auto; /* Move hamburger to the far right */
+    }
+
+    .right-section button.search-icon {
+        font-size: 20px; /* Keep the search icon visible */
+    }
+}

@@ -1,0 +1,156 @@
+/* Container for the entire carousel */
+.carousel-container {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    background-color: #f9f9f9;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Header with title and navigation buttons */
+.carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.carousel-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.carousel-navigation-buttons button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-navigation-buttons button:hover {
+    background-color: gray;
+}
+
+/* Disabled button style */
+.carousel-navigation-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Slide container */
+.slides-container {
+    width: 100%;
+    overflow-x: auto; /* Simple horizontal scrollbar */
+    white-space: nowrap;
+    scrollbar-width: thicker;
+    scrollbar-color: gray #ccc; /* Blue scrollbar */
+}
+
+/* Slides inside the container */
+.slides {
+    display: inline-flex;
+    margin-bottom: 25px;
+}
+
+/* Each individual slide */
+.slide {
+    flex: 0 0 calc(33.33% - 20px);  /* Reduce the size of the slides to fit in space for margin */
+    margin-right: 20px; /* Add space between slides */
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Image container to set dimensions */
+.slide-image-container {
+    width: 100%;
+    height: 480px; /* Adjust height for featured section */
+    position: relative;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Content overlay on the image */
+.slide-content-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    top: 60%; /* Adjust position as needed */
+    left: 10%;
+    text-align: left;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better readability */
+    border-radius: 5px;
+}
+
+.slide-title{
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -10px;
+    font-weight: bold;
+}
+
+/* Content text style */
+.slide-content {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* Shop Now button style */
+.slide-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slide-button:hover {
+    background-color: rgb(187, 187, 187);
+}
+
+/* Responsive behavior */
+@media (max-width: 1024px) {
+    .slide {
+        flex: 0 0 calc(50% - 10px);  /* For medium screens (tablet), show 2 slides per screen with margin */
+    }
+}
+
+@media (max-width: 768px) {
+    .slide {
+        flex: 0 0 100%;  /* For small screens (mobile), show 1 slide per screen */
+        margin-right: 0; /* Remove margin for single slide view */
+    }
+}
+
+/* Custom height for shop-by-sport section */
+.shop-by-sport-slider .carousel-container .slide-image-container {
+    height: 300px; /* Reduced height for Shop By Sport */
+}
+/* Remove background color for overlay in Shop By Sport */
+.shop-by-sport-slider .carousel-container .slide-content-overlay {
+    background-color: transparent !important; /* Remove background color */
+}
+
+/* .member-benifits-slider .carousel-container .slide-content-overlay{
+    background-color: transparent !important;
+} */

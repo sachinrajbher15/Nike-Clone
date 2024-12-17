@@ -1,0 +1,79 @@
+/* General Styles */
+.devBy-container {
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.devBy-container p {
+    color: white;
+}
+
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Social Icon Styles */
+.social-icon {
+    font-size: 24px;
+    color: #868383;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #0077b5;
+    transform: scale(1.2); /* Smooth scaling effect */
+}
+
+/* Hover effect for ❤️ (span) */
+span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+span:hover {
+    cursor: pointer;
+    transform: scale(1.2); /* Scale only the heart symbol */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .devBy-container {
+        padding: 5px;
+    }
+
+    .social-icon {
+        font-size: 18px; /* Increase icon size on mobile */
+    }
+    .devBy-container p {
+        font-size: 15px;
+    }
+    .social-links-container {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links-container {
+        flex-direction: row; /* Stack social icons vertically on very small screens */
+    }
+
+    .social-icon {
+        font-size: 15px; /* Larger icons for small screens */
+        display: flex;
+        flex-direction: row;
+    }
+    .devBy-container p {
+        font-size: 10px;
+    }
+    .social-links-container {
+        gap: 5px;
+    }
+}

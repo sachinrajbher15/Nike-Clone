@@ -1,0 +1,65 @@
+.dont-miss-container {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dont-miss-header {
+    text-align: left;
+    width: 100%;
+    display: flex; 
+    justify-content: flex-start;
+}
+
+.dont-miss-header h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.dont-miss-collage {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.dont-miss-collage img{
+    width: 50%;
+    height: 600px;
+    object-fit: cover;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px){
+    .dont-miss-collage img {
+        width: 50%;
+        height: 400px;
+    }
+}
+@media (max-width: 768px) {
+    .dont-miss-collage img {
+        width: 50%; /* Make images take up the full width when stacked */
+        height: 400px; /* Adjust height for better aspect ratio */
+    }
+
+    /* Make header text smaller for tablet */
+    .dont-miss-header h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .dont-miss-collage img {
+        width: 50%;
+        height: 300px;
+    }
+
+    /* Make header text smaller for mobile */
+    .dont-miss-header h2 {
+        font-size: 1rem;
+    }
+}

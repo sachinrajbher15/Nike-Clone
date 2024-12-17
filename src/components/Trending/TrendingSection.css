@@ -1,0 +1,79 @@
+.trending-container {
+    padding: 20px;
+}
+
+/* Collage Container */
+.tending-collage {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    width: 100%; /* Full width of the container */
+    height: 400px; /* Set a fixed height for the rectangle */
+    overflow: hidden;
+}
+
+/* Left Image */
+.collage-left {
+    flex: 1; /* Occupy half the width */
+    display: flex; /* Ensure proper alignment */
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height of the container */
+}
+
+.collage-left img {
+    width: 100%; /* Fill the left section */
+    height: 100%;
+    object-fit: cover; /* Ensure no distortion */
+}
+
+/* Right Section with Two Images */
+.collage-right {
+    flex: 1; /* Occupy half the width */
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    height: 100%; /* Full height of the container */
+}
+
+.collage-right img {
+    width: 100%; /* Full width of each half */
+    height: 50%; /* Divide height equally between the two images */
+    object-fit: cover; /* Ensure no distortion */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tending-collage {
+        height: auto; /* Allow height to adjust for smaller screens */
+    }
+
+    .collage-left img,
+    .collage-right img {
+        object-fit: cover; /* Maintain proportions */
+    }
+
+    .trending-header h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tending-collage {
+        height: auto; /* Adjust height dynamically */
+    }
+
+    .collage-left, .collage-right {
+        width: 100%; /* Full width for stacked layout */
+        height: auto; /* Adjust height dynamically */
+    }
+
+    .collage-left img,
+    .collage-right img {
+        width: 100%; /* Fill available space */
+        height: auto; /* Maintain proportions */
+    }
+
+    .trending-header h2 {
+        font-size: 1rem;
+    }
+}
